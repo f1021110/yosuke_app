@@ -1,0 +1,13 @@
+<br>
+ <h1 class="">伝達事項</h1>
+        <%= form_for @post do |f| %>
+       
+
+          <div class="">
+            <%= f.label :description %>
+            <%= f.text_area :description, class: '' %>
+          </div>
+
+          <%= f.submit '投稿', class: '' %>
+
+        <% end %>
