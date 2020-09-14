@@ -142,5 +142,21 @@ resouces :posts
 
 <!-- 投稿一覧機能     -->
 
+<!-- ログイン時に　BCrypt::Errors::InvalidHash in SessionsController#create　とエラー -->
+
+password_digestカラムがnilになっているユーザーがいることが原因
+
+$ rake db:reset　で　データベースをリセットした。
+
+<!-- 投稿するとNo method error になるので　下記 image_tagを排除した -->
+
+  <%= image_tag post.image.url %>
+  <%= image_tag '', class: '' %>
+  <%= image_tag '', class: '' %>
+
+  <!-- Userモデルに管理者権限カラムを追加 -->
+
+下記記事を参考に実装
+https://qiita.com/tanutanu/items/7ce8826615f1af605164
 
 
