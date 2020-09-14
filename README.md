@@ -159,4 +159,6 @@ $ rake db:reset　で　データベースをリセットした。
 下記記事を参考に実装
 https://qiita.com/tanutanu/items/7ce8826615f1af605164
 
+git branch
+
 
