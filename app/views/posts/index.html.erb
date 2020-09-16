@@ -16,7 +16,7 @@
       </div>
     <% if current_user.admin? %>
 
-      <%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
+      <%= link_to "削除", method: :destroy, data: { confirm: "You sure?" } %>
     <% end %>
   <% end %>
 
