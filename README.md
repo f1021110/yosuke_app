@@ -159,6 +159,11 @@ $ rake db:reset　で　データベースをリセットした。
 下記記事を参考に実装
 https://qiita.com/tanutanu/items/7ce8826615f1af605164
 
-git branch
+<!-- git branch -->
+https://www.atmarkit.co.jp/ait/articles/1702/27/news022.html
 
+<!-- User機能　管理者権限を簡単に定義 -->
+
+下記の記事を参照し、実装した。
+https://www.y-hakopro.com/entry/2019/07/29/173525
 
