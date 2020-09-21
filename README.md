@@ -167,3 +167,11 @@ https://www.atmarkit.co.jp/ait/articles/1702/27/news022.html
 下記の記事を参照し、実装した。
 https://www.y-hakopro.com/entry/2019/07/29/173525
 
+<!-- ダウンロードリンクの実装 -->
+
+下記の記事を参照
+https://qiita.com/akkun_choi/items/64080a8e17930879b4da
+
+view → download_path
+app/配下にdownloadsフォルダを作成/downloadsフォルダ内にダウンロードさせたいファイルを保存
+
