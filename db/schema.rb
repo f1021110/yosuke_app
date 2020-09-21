@@ -12,12 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_09_20_091537) do
 
-  create_table "documents", force: :cascade do |t|
-    t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "lists", force: :cascade do |t|
     t.integer "user_id"
     t.string "name"

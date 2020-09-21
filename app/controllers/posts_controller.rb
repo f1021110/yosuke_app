@@ -26,11 +26,11 @@ class PostsController < ApplicationController
     
     # if post.user_id == current_user.admin
     if current_user.admin
-     　post.destroy #destroyメソッドを使用し対象のツイートを削除する。
-    end
+      post.destroy #destroyメソッドを使用し対象のツイートを削除する。
+    # end
     # if post.delete
-        # redirect_to posts_path, success: '削除しました'
-    # end 
+      redirect_to posts_path, success: '削除しました'
+    end 
   end
 
   private
