@@ -3,7 +3,8 @@ class ListsController < ApplicationController
   end
 
   def download
-    download_file_name = "public/master/master.txt"
-    send_file download_file_name
+    filepath = Rails.root.join('app','downloads','master.txt')
+    stat = File::stat(filepath)
+    send_file(filepath, :filename => 'master.txt', :length => stat.size)
   end
 end
