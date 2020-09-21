@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'lists/new'
   # get 'documents/new'削除済み
   
   get 'posts/new'
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :posts
+  resources :lists
   # resources :documents削除済み
 
   post '/login', to: 'sessions#create'
@@ -18,8 +20,7 @@ Rails.application.routes.draw do
   # get '/logout', to: 'sessions#destroy'
   delete 'logout', to: 'sessions#destroy'
 
- 
   delete 'posts/:id' => 'posts#destroy'
 
-
+  get 'download', to: 'lists#download'
 end
