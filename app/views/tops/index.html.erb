@@ -1,17 +1,25 @@
-<br>
-<h1>内藤ポータル</h1>
-<p>日常業務を楽にする</p>
+<div class="top-hero-wrapper text-center">
+  <div class="container top-hero-container">
 
-<%= link_to  "新規登録", new_user_path, class:'' %>
-<br>
-<%= link_to  "ログイン", login_path, class:'' %>
-<br>
-<%= link_to "ログアウト", logout_path, method: :delete  %>
-<br>                
-<br>                
-<%= link_to  "資料のダウンロード", new_list_path, class:'' %>
-<br>
-<%= link_to  "伝達事項", new_post_path, class:'' %>
+    <h1>内藤ポータル</h1>
+    <p>日常業務を楽にする</p>
+        
+    <div class="row">
+    
+      <div class="col-md-offset-3 col-md-3">
+        <%= link_to  "新規登録", new_user_path, class:'' %>
+        <%= link_to  "ログイン", login_path, class:'' %>
+        <%= link_to "ログアウト", logout_path, method: :delete  %>
+      </div>
+
+      <div class="col-md-3">
+        <%= link_to  "資料のダウンロード", new_list_path, class:'' %>
+        <%= link_to  "掲示板に投稿する", new_post_path, class:'' %>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
   
