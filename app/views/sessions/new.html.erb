@@ -1,8 +1,16 @@
-<div class="users-new-wrapper">
+<%
+=begin%>
+ <div class="users-new-wrapper"> 
+<%
+=end%>
+<div class="top-hero-wrapper text-center">
+
   <div class="container">
     <div class="row">
       <div class="col-md-offset-4 col-md-4 users-new-container">
-        <h1 class="text-center text-white">log_in</h1>
+        <br>
+        <br>
+        <h1 class="text-center text-white">ログイン</h1>
         <%= form_for :session, url: login_path do |f| %>
           <div class="form-group">
             <%= f.label :email, class: "text-white" %>
