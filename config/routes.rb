@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   get 'lists/new'
   # get 'documents/new'削除済み
-  
   get 'posts/new'
   get 'sessions/new'
   get 'users/new'
@@ -22,7 +21,7 @@ Rails.application.routes.draw do
 
   delete 'posts/:id' => 'posts#destroy'
 
-  # get 'download', to: 'lists#download'
+  get 'download', to: 'lists#download'
   # get 'download/:id', to: 'lists#download'
-  get 'download/:id', to: 'lists#download', as: 'download'
+  # get 'download/:id', to: 'lists#download', as: 'download'
 end

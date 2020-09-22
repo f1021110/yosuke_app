@@ -1,17 +1,23 @@
-<br>
- <h1 class="">伝達事項</h1>
- 
-  <%= form_for @post do |f| %>
-  
+<div class="users-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-new-container">
+        <h1 class="text-center text-white">伝達事項</h1>
+        
+          <%= form_for @post do |f| %>
+          
 
-    <div class="">
-      <%= f.label :description %>
-      <%= f.text_area :description, class: '' %>
+            <div class="form-group">
+              <%= f.label :description, class: 'text-white' %>
+              <%= f.text_area :description, class: 'form-control' %>
+            </div>
+            
+            <%= f.submit '投稿', class: 'btn-block btn-white' %>
+
+          <% end %>
+      </div>
     </div>
-    
-    <%= f.submit '投稿', class: '' %>
-
-  <% end %>
-
+  </div>
+</div>
 
   

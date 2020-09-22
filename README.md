@@ -175,3 +175,9 @@ https://qiita.com/akkun_choi/items/64080a8e17930879b4da
 view → download_path
 app/配下にdownloadsフォルダを作成/downloadsフォルダ内にダウンロードさせたいファイルを保存
 
+
+<!-- viewのエラー -->
+エラーが出ない
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+エラーが出る
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
