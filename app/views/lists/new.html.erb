@@ -1,0 +1,39 @@
+
+<div class="top-hero-wrapper text-center">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-new-container">
+        <br>
+        <br>
+        <h1 class="text-center text-white">ダウンロードリンク集</h1>
+　　　　　<div class="form-group">
+
+          <%= button_to '見積書_テンプレート', download_path, method: :get, class: "btn-block btn-white" %>
+          <%= button_to '日報_テンプレート', download_path, method: :get, class: "btn-block btn-white" %>
+　　　　　
+　　　　　</div>
+        <h1 class="text-center text-white">ファイルアップロード</h1>
+　　　　　<div class="form-group">
+          <%= form_with model: @list, url: upload_path do |f| %>
+            <div>
+              <%= f.label "ファイル名" %>
+              <%= f.text_field :name, class: "btn-block btn-white" %>
+            </div>
+            <div>
+              <%= f.label "詳細" %>
+              <%= f.text_area :details, class: "btn-block btn-white" %>
+            </div>
+            <div>
+              <%= f.label "アップするファイルを選択" %>
+              <%= f.file_field :pdf, class: "btn-block btn-white" %>
+            </div>
+            <%= f.hidden_field "" %>
+            <%= f.submit "送信", class: "btn-block btn-white" %>
+          <% end %>
+        </div>
+     </div>
+    </div>
+  </div>
+</div>
+

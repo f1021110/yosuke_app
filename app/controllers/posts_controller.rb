@@ -17,6 +17,22 @@ class PostsController < ApplicationController
     end
   end
 
+
+  def destroy
+    # post = Post.find_by(user_id: current_user.admin)
+    post = Post.find(params[:id])
+    # favorite.user_id = current_user.id
+    # favorite.topic_id = params[:topic_id]
+    
+    # if post.user_id == current_user.admin
+    if current_user.admin
+      post.destroy #destroyメソッドを使用し対象のツイートを削除する。
+    # end
+    # if post.delete
+      redirect_to posts_path, success: '削除しました'
+    end 
+  end
+
   private
   def post_params
     params.require(:post).permit(:description)

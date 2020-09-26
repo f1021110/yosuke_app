@@ -1,28 +1,43 @@
-<br>
-<h1 class="">新規登録</h1>
-  <%= form_for @user do |f| %>
-    
-    <div class="name">
-      <%= f.label :name, class: '' %>
-      <%= f.text_field :name, class: '' %>
-    </div>
+<%
+=begin%>
+ <div class="users-new-wrapper"> 
+<%
+=end%>
+<div class="top-hero-wrapper text-center">
 
-    <div class="email">
-      <%= f.label :email, class: '' %>
-      <%= f.text_field :email, class: 'f' %>
-    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-new-container">
+        <br>
+        <br>
+        <h1 class="text-center text-white">新規登録</h1>
+          <%= form_for @user do |f| %>
+            
+            <div class="form-group">
+              <%= f.label :name, class: 'text-white' %>
+              <%= f.text_field :name, class: 'form-control' %>
+            </div>
 
-    <div class="password">
-        <%= f.label :password, class: '' %>
-        <%= f.password_field :password, class: '' %>
-    </div>
+            <div class="form-group">
+              <%= f.label :email, class: 'text-white' %>
+              <%= f.text_field :email, class: 'form-control' %>
+            </div>
 
-    <div class="password_confirmation">
-      <%= f.label :password_confirmation, class: '' %>
-      <%= f.password_field :password_confirmation, class: '' %>
-    </div>
+            <div class="form-group">
+                <%= f.label :password, class: 'text-white' %>
+                <%= f.password_field :password, class: 'form-control' %>
+            </div>
 
-    <%= f.submit "登録", class: '' %>
-  <% end %>
-  
-  <%= link_to 'ログイン', 'login_path',class: '' %>
+            <div class="form-group">
+              <%= f.label :password_confirmation, class: 'text-white' %>
+              <%= f.password_field :password_confirmation, class: 'form-control' %>
+            </div>
+
+            <%= f.submit "登録", class: 'btn-block btn-white' %>
+          <% end %>
+          
+          <%= link_to 'ログイン', 'login_path',class: 'text-white' %>
+      </div>
+    </div>
+  </div>
+</div>

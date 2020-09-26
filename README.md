@@ -142,5 +142,42 @@ resouces :posts
 
 <!-- 投稿一覧機能     -->
 
+<!-- ログイン時に　BCrypt::Errors::InvalidHash in SessionsController#create　とエラー -->
+
+password_digestカラムがnilになっているユーザーがいることが原因
+
+$ rake db:reset　で　データベースをリセットした。
+
+<!-- 投稿するとNo method error になるので　下記 image_tagを排除した -->
+
+  <%= image_tag post.image.url %>
+  <%= image_tag '', class: '' %>
+  <%= image_tag '', class: '' %>
+
+  <!-- Userモデルに管理者権限カラムを追加 -->
+
+下記記事を参考に実装
+https://qiita.com/tanutanu/items/7ce8826615f1af605164
+
+<!-- git branch -->
+https://www.atmarkit.co.jp/ait/articles/1702/27/news022.html
+
+<!-- User機能　管理者権限を簡単に定義 -->
+
+下記の記事を参照し、実装した。
+https://www.y-hakopro.com/entry/2019/07/29/173525
+
+<!-- ダウンロードリンクの実装 -->
+
+下記の記事を参照
+https://qiita.com/akkun_choi/items/64080a8e17930879b4da
+
+view → download_path
+app/配下にdownloadsフォルダを作成/downloadsフォルダ内にダウンロードさせたいファイルを保存
 
 
+<!-- viewのエラー -->
+エラーが出ない
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+エラーが出る
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>

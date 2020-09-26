@@ -1,0 +1,7 @@
+<% @lists.each do |list| %>
+  <%= link_to list.name, rails_blob_path(list.list_file) %>
+  <%= list.details %>
+<% end %>
+
+
+
