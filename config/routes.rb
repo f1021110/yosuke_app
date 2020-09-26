@@ -7,9 +7,7 @@ Rails.application.routes.draw do
   # get 'tops/index'
   root 'tops#index'
 
-  resources :users
-  resources :posts
-  resources :lists
+
   # resources :documents削除済み
 
   post '/login', to: 'sessions#create'
@@ -24,4 +22,13 @@ Rails.application.routes.draw do
   get 'download', to: 'lists#download'
   # get 'download/:id', to: 'lists#download'
   # get 'download/:id', to: 'lists#download', as: 'download'
+
+  get 'upload', to: 'list_upload#new'
+  post 'upload', to: 'list_upload#create'
+
+  resources :users
+  resources :posts
+  resources :uploaded_lists, only: [:index] do
+    
+  end
 end
